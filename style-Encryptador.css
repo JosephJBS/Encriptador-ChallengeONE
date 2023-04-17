@@ -1,0 +1,18 @@
+.input-area{
+    margin: 0 1.5%;
+    border: black 3px solid;
+    padding: 30px 20px;
+    width: 55%;
+    height: 300px;
+    border-radius: 20px;
+
+}
+
+.output-area{
+    margin: 20px 1.5%;
+    border: black 3px solid;
+    padding: 30px 20px;
+    width: 35%;
+    border-radius: 20px;
+}
+

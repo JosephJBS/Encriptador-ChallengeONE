@@ -9,10 +9,14 @@
 }
 
 .output-area{
-    margin: 20px 1.5%;
     border: black 3px solid;
     padding: 30px 20px;
     width: 35%;
+    height: 300px;
     border-radius: 20px;
+}
+
+main{
+    display: flex;
 }
 

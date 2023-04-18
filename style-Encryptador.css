@@ -1,3 +1,75 @@
+body{
+    background-color: #f3f5fc;
+}
+
+/*HEADER CSS ELEMENTS*/
+
+.header-content{
+    display: flex;
+}
+
+.alura-info{
+    border: black solid;
+    padding: 30px 20px;
+    margin:  1.5% 1.5%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.alura-info h2{
+    color: white;
+}
+
+.dev-info{
+    /* border: black solid; */
+    padding: 10px 10px;
+    margin:  1.5% 1.5%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dev-info h1{
+    color: #0a3871;
+}
+
+.dev-info h2{
+    font-style: italic;
+    color: #0a3871;
+}
+
+.contacto-info{
+    /* border: black solid; */
+    width: 20%;
+    padding: 30px 20px;
+    margin:  1.5% 1.5%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contacto-info  i{
+    font-size:48px;
+}
+
+#bt-linkedin{
+    color:#0a66c2;
+}
+
+#bt-github{
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN CSS ELEMENTS*/
 .input-area{
     margin: 0 1.5%;
     border: black 3px solid;
@@ -6,6 +78,35 @@
     height: 300px;
     border-radius: 20px;
 
+}
+
+.input-txarea{
+    /*border: none;  /*Agregar cuando tengas el area correcta*/
+    height: 80%;
+    width: 100%;
+    border-radius: 12px;
+    resize: none;
+    
+} 
+
+.input-txarea::placeholder{
+    color: blue;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-txarea:focus::placeholder{
+    color: transparent;
+}
+
+
+.input-txarea:hover{
+    border-color: rgb(29, 114, 199);
+    place-content: unset;
+}
+
+.area-botones{
+    text-align: center;
 }
 
 .output-area{
@@ -20,3 +121,23 @@ main{
     display: flex;
 }
 
+
+
+::-webkit-input-placeholder {
+    color: red;
+    text-align: center;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: red;
+    text-align: center;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: red;
+    text-align: center;
+}
+:-ms-input-placeholder {
+    color: red;
+    text-align: center;
+}

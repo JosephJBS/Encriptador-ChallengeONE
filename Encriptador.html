@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-Encryptador.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style-Encryptador.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Encriptador Oracle</title>
 </head>
 
 <body>
     <header>
-        <img src="assets/Frame 6.png" alt="aluraOne">
-        <h2>Alura-ONE</h2>
-        <h1>Joseph Dev</h1>
+        <div class="header-content">
+            <div class="alura-info">
+                <img src="assets/Frame 6.png" alt="aluraOne" />
+                <h2 >Alura-ONE</h2>
+            </div>
+
+            <div class="dev-info">
+                <b><strong> <h1>Joseph</h1></strong></b>
+                
+               
+                <h2 class="label">Dev &lt;JBS &gt;</h2>
+            </div>
+
+            <div class="contacto-info">
+                <p>Sobre mí</p>
+                <a href="https://www.linkedin.com/in/joseph-bellido-suica-a9789a255/" title="LinkedIn" class="" target="_blank"><i id="bt-linkedin"
+                        class="fa fa-linkedin-square"></i></a>
+
+                <a href="https://github.com/JosephJBS" title="Github" class="btn btn-linkedin btn-lg" target="_blank"><i
+                        class="fa fa-github" id="bt-github"></i></a>
+            </div>
+        </div>
     </header>
 
     <main>
         <div class="input-area">
-            <textarea cols="30" rows="10"></textarea>
-            <p>Solo letras minusculas y sin acentos</p>
-            <input type="submit" value="Encriptar" class="bt-encriptar">
-            <input type="submit" value="Desencriptar" class="bt-desencriptar">
+            <textarea cols="30" rows="10" placeholder="Ingrese su texto aquí" class="input-txarea"></textarea>
+            <p class="info">Solo letras minusculas y sin acentos</p>
+
+            <div class="area-botones">
+                <input type="submit" value="Encriptar" class="bt-encriptar" />
+                <input type="submit" value="Desencriptar" class="bt-desencriptar" />
+            </div>
         </div>
 
         <div class="output-area">
-            <textarea name="" id="" cols="30" rows="10" disabled="true"></textarea> <br>
-            <input type="submit" value="Copiar" class="bt-copiar">
+            <textarea name="" id="" cols="30" rows="10" disabled="true"></textarea>
+            <br />
+            <input type="submit" value="Copiar" class="bt-copiar" />
         </div>
-
-
-
     </main>
 
-    <footer>
-        Copyright y esas cosas
-    </footer>
+    <footer>Copyright y esas cosas</footer>
 </body>
 
 </html>

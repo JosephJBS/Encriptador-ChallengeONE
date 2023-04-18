@@ -1,3 +1,8 @@
-function(texto){
+
+function encriptador (text){
+
+}
+
+function desencriptador (text){
 
 }

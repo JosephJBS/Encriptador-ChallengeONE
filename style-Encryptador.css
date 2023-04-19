@@ -1,3 +1,17 @@
+.swal2-icon.swal2-warning {
+    border-color: white !important;
+    color: white !important;
+    background-color: #0a3871;
+}
+
+.swal2-popup {
+    font-size: 15px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    color: black !important;
+}
+
+
+
 body{
     background-color: #f3f5fc;
 }

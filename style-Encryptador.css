@@ -107,6 +107,7 @@ body{
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 10%;
+    font-weight: bolder;
 }
 
 .bt-encriptar:hover{
@@ -126,6 +127,7 @@ body{
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 10%;
+    font-weight: bolder;
 }
 
 .bt-desencriptar:hover{
@@ -166,19 +168,17 @@ body{
 }
 
 .output-txtarea{
-    /* border:black  1px solid ;  Agregar cuando tengas el area correcta */
-    background-color: #f3f5fc;
     margin-top: 40px;
     font-size: 24px;
     color: #495057;
     font-weight: bold;
-    height: 80%;
+    height: 440px;
     width: 100%;
     border-radius: 12px;
     resize: none;
     outline: none; /*quita el borde cuando se selecciona*/
     font-family: 'Montserrat', sans-serif;
-    border: none;
+    border: none; 
     
 }
 
@@ -189,10 +189,11 @@ body{
     border:1px solid #0a3871;
     margin-bottom: 10px;
     background-color: white;
-    height: 50px;
-    width: 250px;
+    height: 55px;
+    width: 260px;
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
 }
 
 .bt-copiar:hover{

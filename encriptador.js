@@ -87,9 +87,27 @@ function getTextAreaContentDecrypted() {
 
 }
 
+function copyText(){
+    var text = document.getElementById("output-txtarea");
+    text.select()
+    navigator.clipboard.writeText(text.value)
+    .then(function() {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Texto copiado en portapapeles',
+            showConfirmButton: false,
+            timer: 1200
+          })
+    })
+    .catch(function() {
+      alert("Error al copiar el texto al portapapeles.");
+    });
+}
+
 function showOutputTxtArea(div, text) {
     let html = `<textarea disabled name="" id="output-txtarea" cols="20" rows="10"  class="output-txtarea">${text}</textarea> 
-                    <input type="submit" value="Copiar" class="bt-copiar" />`;
+                    <input type="submit" id="bt-copy" onclick="copyText()" value="Copiar" class="bt-copiar" />`;
 
     div.insertAdjacentHTML('beforeend', html);
 }

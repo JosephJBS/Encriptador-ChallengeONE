@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--para iniciar la confguracion movil -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
 
     <link rel="shortcut icon" href="assets/1813806.png">
@@ -16,8 +16,10 @@
 </head>
 
 <body>
-    <div style="display: flex;">
+    <div class="in-out-content">
+
         <div class="input-content">
+
             <header>
                 <div class="header-content">
                     <div class="alura-info">
@@ -26,6 +28,7 @@
                     </div>
                 </div>
             </header>
+
             <div class="input-area">
                 <textarea id="input-txtarea" cols="30" rows="10" placeholder="Ingrese su texto aquí"
                     class="input-txarea"></textarea>
@@ -36,20 +39,23 @@
                 </div>
 
                 <div class="area-botones">
-                    <input onclick="getTextAreaContentEncrypted()" type="submit" value="Encriptar" class="bt-encriptar" />
-                    <input onclick="getTextAreaContentDecrypted()"type="submit" value="Desencriptar" class="bt-desencriptar" />
+                    <input onclick="getTextAreaContentEncrypted()" type="submit" value="Encriptar"
+                        class="bt-encriptar" />
+                    <input onclick="getTextAreaContentDecrypted()" type="submit" value="Desencriptar"
+                        class="bt-desencriptar" />
                 </div>
+            </div>
+
+        </div>
+
+        <div class="output-area">
+            <div id="output-nocontent">
+                <img src="assets/Muñeco.png" alt="" id="img-notcontent">
+                <h2>Ningun mensaje fue encontrado</h2>
+                <p>Ingrese el texto que desees encriptar o desencriptar</p>
             </div>
         </div>
-        <main>
-            <div class="output-area">
-                <div id="output-nocontent">
-                    <img src="assets/Muñeco.png" alt="" id="img-notcontent">
-                    <h2>Ningun mensaje fue encontrado</h2>
-                    <p>Ingrese el texto que desees encriptar o desencriptar</p>
-                </div>
-            </div>
-        </main>
+
 
 
     </div>

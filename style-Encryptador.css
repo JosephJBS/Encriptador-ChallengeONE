@@ -1,3 +1,5 @@
+/* SweetAlert pop up config*/
+
 .swal2-icon.swal2-warning {
     border-color: white !important;
     color: white !important;
@@ -10,6 +12,8 @@
     color: black !important;
 }
 
+/*PRINCIPAL CONTENT*/
+
 body {
     background-color: #f3f5fc;
 }
@@ -19,9 +23,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 100%;
-    /* border: #0a3871 1px solid; */
-     
+    max-width: 100%;     
 }
 
 /*HEADER CSS ELEMENTS*/
@@ -45,15 +47,12 @@ body {
 }
 
 .input-content {
-    /* border: #0a3871 1px solid; */
     margin: 5px 1.5% 0 5px;
     width: 74%;
 }
 
-/* MAIN CSS ELEMENTS*/
 .input-area {
-    margin: 0 0.5% 1.5% 20%;
-     
+    margin: 0 0.5% 1.5% 20%;    
     padding: 30px 20px;
     width: auto;
     height: auto;
@@ -61,7 +60,6 @@ body {
 }
 
 .input-txarea {
-    /* border: #0a3871 1px solid; */
     border: none;
     background-color: #f3f5fc;
     margin: 0 1.5% 1.5% 1.5%;
@@ -73,7 +71,6 @@ body {
     border-radius: 12px;
     resize: none;
     outline: none;
-    /*quita el borde cuando se selecciona */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -104,11 +101,6 @@ body {
     margin: 0 0 0 1.5%;
     float: left;
 }
-
-.area-botones{
-    /* border: #0a3871 1px solid; */
-}
-
 
 .bt-encriptar {
     color: white;
@@ -153,8 +145,6 @@ body {
 }
 
 .output-area {
-     
-    /* border: none; */
     margin-top: 5px;
     padding: 30px 20px;
     width: 20%;
@@ -172,7 +162,6 @@ body {
 }
 
 .output-area img {
-     
     height: 230px;
     width: auto;
     margin-top: 70px;
@@ -203,7 +192,6 @@ body {
     /*quita el borde cuando se selecciona*/
     font-family: 'Montserrat', sans-serif;
     border: none;
-
 }
 
 .bt-copiar {
@@ -227,29 +215,6 @@ body {
     transition: 0.2s;
 }
 
-
-
-
-/* 
-::-webkit-input-placeholder {
-    color: red;
-    text-align: center;
-}
-:-moz-placeholder {
-    color: red;
-    text-align: center;
-}
-::-moz-placeholder {
-    color: red;
-    text-align: center;
-}
-:-ms-input-placeholder {
-    color: red;
-    text-align: center;
-} 
-*/
-
-
 /* FOOTER CSS ELEMENTS*/
 
 .footer-content {
@@ -259,7 +224,6 @@ body {
 }
 
 .dev-info {
-    /* border: black solid; */
     padding: 10px 10px;
     margin: 1.5% 1.5% 1.5% 6%;
     text-align: center;
@@ -277,7 +241,6 @@ body {
 }
 
 .contacto-info {
-    /* border: black solid; */
     background-color: white;
     border-radius: 15px;
     color: #0a3871;
@@ -332,13 +295,10 @@ body {
         margin-left: auto;
     }
 
-    
-
     .input-area{
         justify-content: center;
         margin:auto ;
         width: 85%;
-
     }
 
     .header-content{
@@ -349,7 +309,6 @@ body {
         width: auto;
         justify-content: center;
     }
-
 }
 
 

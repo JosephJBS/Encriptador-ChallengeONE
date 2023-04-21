@@ -1,90 +1,43 @@
-function getTextAreaContentEncrypted() {
+function textEncryptDecrypttByButtonId(action) {
     var noContenDivExist = true
+
+    //obtiene texto del textarea
     var text = document.getElementById("input-txtarea");
     var textValue = text.value;
 
+    var containerDiv = document.querySelector(".output-area")
     const divOutPut = document.getElementById("output-nocontent")
-
-
-    //REFACTOR
-    if (divOutPut == null) {
-        noContenDivExist = false
-        console.log("No existe el img nocontent")
-    } else {
-        var parent = divOutPut.parentNode;
-        console.log("existe el img nocontent")
-    }
-
     var div = document.createElement('div');
 
-    var containerDiv = document.querySelector(".output-area")
-    containerDiv.appendChild(div)
-
-    if (textValue == "") {
+    //Verifica la presencia del div NoContent
+    if (divOutPut == null) {
+        noContenDivExist = false
+        console.log("Imagen de NoContent no presente")
+    } else {
+        var parent = divOutPut.parentNode;
+        console.log("Imagen de NoContent no presente")
+        containerDiv.appendChild(div)
+    }
+    
+    if (textValue.trim() == "") {
         Swal.fire({
             title: "Ingrese un mensaje ☺",
             icon: "warning",
             confirmButtonColor: '#0a3871',
         });
     } else {
+        // Si el div noContent existe se elimina para poner el textarea de salida
         if (noContenDivExist) parent.removeChild(divOutPut);
-        var encryptedText = encriptador(textValue)
         
-
+        // Verifica si se realizara el encriptado o desencrriptado
+        (action.id == "encrypt")? encryptedText = encryptor(textValue.trim())
+                                : encryptedText = decryptor(textValue.trim())
+        
         if(htmlElementExist("output-txtarea")){
             var outputTex = document.getElementById("output-txtarea");
             outputTex.value= encryptedText;
-        }else{
-            showOutputTxtArea(div, encryptedText);
-        }
-        
-        
+        }else showOutputTxtArea(div, encryptedText);    
     }
-}
-
-function getTextAreaContentDecrypted() {
-    var noContenDivExist = true
-    var text = document.getElementById("input-txtarea");
-    var textValue = text.value;
-
-    const divOutPut = document.getElementById("output-nocontent")
-
-
-    //REFACTOR
-    if (divOutPut == null) {
-        noContenDivExist = false
-        console.log("No existe el img nocontent")
-    } else {
-        var parent = divOutPut.parentNode;
-        console.log("existe el img nocontent")
-    }
-
-    var div = document.createElement('div');
-
-    var containerDiv = document.querySelector(".output-area")
-    containerDiv.appendChild(div)
-
-    if (textValue == "") {
-        Swal.fire({
-            title: "Ingrese un mensaje ☺",
-            icon: "warning",
-            confirmButtonColor: '#0a3871',
-        });
-    } else {
-        if (noContenDivExist) parent.removeChild(divOutPut);
-        var encryptedText = desencriptador(textValue)
-        
-
-        if(htmlElementExist("output-txtarea")){
-            var outputTex = document.getElementById("output-txtarea");
-            outputTex.value= encryptedText;
-        }else{
-            showOutputTxtArea(div, encryptedText);
-        }
-        
-        
-    }
-
 }
 
 function copyText(){
@@ -118,7 +71,7 @@ function htmlElementExist(idElement) {
     else return false;
 }
 
-function encriptador(text) {
+function encryptor(text) {
     const chars = {
         a: "ai",
         e: "enter",
@@ -132,7 +85,7 @@ function encriptador(text) {
     return s;
 }
 
-function desencriptador(text) {
+function decryptor(text) {
     const chars = {
         ai: "a",
         enter: "e",
@@ -144,4 +97,12 @@ function desencriptador(text) {
     var s = text;
     s = s.replace(/(?:ai|enter|imes|ober|ufat)/g, (m) => chars[m]);
     return s;
+}
+
+function validateLoweCase(){
+
+}
+
+function validateLoweCase(){
+
 }

@@ -20,6 +20,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
+    /* border: #0a3871 1px solid; */
      
 }
 
@@ -44,6 +45,7 @@ body {
 }
 
 .input-content {
+    /* border: #0a3871 1px solid; */
     margin: 5px 1.5% 0 5px;
     width: 74%;
 }
@@ -59,7 +61,7 @@ body {
 }
 
 .input-txarea {
-    border: black 1px solid;
+    /* border: #0a3871 1px solid; */
     border: none;
     background-color: #f3f5fc;
     margin: 0 1.5% 1.5% 1.5%;
@@ -103,16 +105,20 @@ body {
     float: left;
 }
 
+.area-botones{
+    /* border: #0a3871 1px solid; */
+}
+
 
 .bt-encriptar {
     color: white;
     font-size: medium;
-    border: 1px solid #0a3871;
+    border: 1px #0a3871 solid ;
     margin-right: 0px;
     margin-bottom: 10px;
     background-color: #0a3871;
     height: 55px;
-    width: 260px;
+    width: 250px;
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 1.5%;
@@ -128,13 +134,13 @@ body {
 
 .bt-desencriptar {
     color: #0a3871;
+    border: 1px #0a3871 solid ;
     font-size: medium;
-    border: 1px solid #0a3871;
     margin-bottom: 10px;
     margin-left: 1.5%;
     background-color: #d8dfe8;
     height: 55px;
-    width: 260px;
+    width: 250px;
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
@@ -300,4 +306,67 @@ body {
 
 
 /*MEDIAS QUERY*/
+
+@media screen and (max-width:1080px) { 
+    .output-area img{
+        display: none !important;
+    }
+    
+    .output-area{
+        width: 68%;
+        height: auto;
+        margin-left: 0px;
+    } 
+
+    .output-txtarea{
+        height: auto;
+    }
+    
+    .bt-encriptar{
+        width: 170px;
+        margin-left: 0px;
+    }
+
+    .bt-desencriptar{
+        width: 170px;
+        margin-left: auto;
+    }
+
+    
+
+    .input-area{
+        justify-content: center;
+        margin:auto ;
+        width: 85%;
+
+    }
+
+    .header-content{
+        margin: 10px;
+    }
+
+    .area-botones{
+        width: auto;
+        justify-content: center;
+    }
+
+}
+
+
+@media screen and (max-width:720px) { 
+    .bt-encriptar{
+        width: 250px;
+        margin-right: 0px;
+    }
+
+    .bt-desencriptar{
+        width: 250px;
+    }
+
+    .area-botones{
+        width: auto;
+        justify-content: center;
+        text-align: center;
+    }
+}
 

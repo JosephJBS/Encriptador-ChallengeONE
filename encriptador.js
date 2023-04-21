@@ -18,44 +18,39 @@ function textEncryptDecrypttByButtonId(action) {
         console.log("Imagen de NoContent no presente")
         containerDiv.appendChild(div)
     }
+
     
-    if (textValue.trim() == "") {
-        Swal.fire({
-            title: "Ingrese un mensaje ☺",
-            icon: "warning",
-            confirmButtonColor: '#0a3871',
-        });
-    } else {
+    if(validateTextArea(textValue.trim())){
         // Si el div noContent existe se elimina para poner el textarea de salida
         if (noContenDivExist) parent.removeChild(divOutPut);
-        
+
         // Verifica si se realizara el encriptado o desencrriptado
-        (action.id == "encrypt")? encryptedText = encryptor(textValue.trim())
-                                : encryptedText = decryptor(textValue.trim())
-        
-        if(htmlElementExist("output-txtarea")){
+        (action.id == "encrypt") ? encryptedText = encryptor(textValue.trim())
+            : encryptedText = decryptor(textValue.trim())
+
+        if (htmlElementExist("output-txtarea")) {
             var outputTex = document.getElementById("output-txtarea");
-            outputTex.value= encryptedText;
-        }else showOutputTxtArea(div, encryptedText);    
+            outputTex.value = encryptedText;
+        } else showOutputTxtArea(div, encryptedText);
     }
 }
 
-function copyText(){
+function copyText() {
     var text = document.getElementById("output-txtarea");
     text.select()
     navigator.clipboard.writeText(text.value)
-    .then(function() {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Texto copiado en portapapeles',
-            showConfirmButton: false,
-            timer: 1200
-          })
-    })
-    .catch(function() {
-      alert("Error al copiar el texto al portapapeles.");
-    });
+        .then(function () {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Texto copiado en portapapeles',
+                showConfirmButton: false,
+                timer: 1200
+            })
+        })
+        .catch(function () {
+            alert("Error al copiar el texto al portapapeles.");
+        });
 }
 
 function showOutputTxtArea(div, text) {
@@ -99,10 +94,36 @@ function decryptor(text) {
     return s;
 }
 
-function validateLoweCase(){
+function validateTextArea(text) {
+    var validado = true;
+    words = String(text);
+    var regxs = {
+        "upper": /[A-Z]/,
+        "accents": /[áéíóú]/
+    }
 
+    if (text == ""){
+        sweetAlertWarning("Ingrese un mensaje ☺");
+        validado = false
+    }
+
+    if (regxs.upper.test(words)){
+        sweetAlertWarning("Ingrese un texto en minusculas ☺");
+        validado = false;
+    }
+
+    if (regxs.accents.test(words)){
+        sweetAlertWarning("Ingrese un texto sin acentos ☺");
+        validado = false;    
+    }
+
+    return validado;
 }
 
-function validateLoweCase(){
-
+function sweetAlertWarning(mensaje){
+    Swal.fire({
+        title: mensaje,
+        icon: "warning",
+        confirmButtonColor: '#0a3871',
+    });
 }
